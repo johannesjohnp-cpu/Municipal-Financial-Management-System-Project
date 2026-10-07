@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 
@@ -13,7 +14,7 @@ int assetCount = 0;
 
 void searchAssets(void);
 
-static void  readText(const char * prompt, char *dest, int size )
+static void readText(const char * prompt, char *dest, int size )
 {
     do{
         printf("%s", prompt);
@@ -85,11 +86,6 @@ void displayAssets(void)
     printf("------------------------------------------------------------\n");
 }
 
-void searchAssets(void)
-{
-    searchAssets();
-}
-    
 void searchAssets(void) {
     char term[50];
     int found = 0;

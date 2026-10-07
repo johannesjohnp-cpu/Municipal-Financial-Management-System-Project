@@ -1,24 +1,17 @@
-#ifndef EMPLOYEES_H
-#define EMPLOYEES_H
+#ifndef EMPLOYMENT_MANAGEMENT_H
+#define EMPLOYMENT_MANAGEMENT_H
 
-#define MAX_EMPLOYEES 50
-
-extern int employeeID[MAX_EMPLOYEES];
-extern char employeeName[MAX_EMPLOYEES][50];
-extern char department[MAX_EMPLOYEES][50];
-
-extern float basicSalary[MAX_EMPLOYEES];
-extern float housingAllowance[MAX_EMPLOYEES];
-extern float transportAllowance[MAX_EMPLOYEES];
-extern float otherAllowance[MAX_EMPLOYEES];
+#define MAX_EMPLOYEES 100
 
 extern int employeeCount;
+extern double basicSalary[MAX_EMPLOYEES];
+extern double housingAllowance[MAX_EMPLOYEES];
+extern double transportAllowance[MAX_EMPLOYEES];
+extern double otherAllowance[MAX_EMPLOYEES];
 
-
-
-void addEmployee();
-void displayEmployees();
-void searchEmployee();
-void calculateSalary();
+void addEmployee(void);
+void displayEmployees(void);
+void searchEmployee(void);
+void calculateSalary(void);
 
 #endif

@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 #include "validation.h"
-
-#include "employee_management.h"
+#include "employment_management.h"
 
 #include "budget.h"
 
@@ -10,7 +9,7 @@
 
 #include "assets.h"
 
-#include "report.h"
+#include "reports.h"
 
 
 #define MENU_EMPLOYEES 1

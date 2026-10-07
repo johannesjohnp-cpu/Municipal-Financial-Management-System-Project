@@ -1,5 +1,6 @@
 #include <stdio.h> 
 
+#include "employment_management.h"
 #include "reports.h" 
 #include "employees.h" 
 #include "budget.h" 
