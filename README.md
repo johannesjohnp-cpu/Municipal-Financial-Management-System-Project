@@ -27,6 +27,17 @@ The Municipal Financial Management System (MFMS) is a modular console-based appl
 * Asset Management Module: Operates a structured asset register tracking valuation, condition, and departmental deployment.
 * Consolidated Reports Module: Generates automated statistical overviews of workforce data, financial execution, and asset registers.
 
+## Links & Project Documentation
+* **GitHub Repository:** https://github.com/johannesjohnp-cpu/Municipal-Financial-Management-System-Project
+* **Technical Report:** Included in Moodle submission archive
+
+## Compilation & Execution Instructions
+
+### Building the Project
+Open your terminal in the project directory and run:
+
+```cmd
+gcc main.c budget.c assets.c employment_management.c reports.c supplier.c validation.c -o municipal_system
 
 ## Compilation Instructions
 To compile all modular source and header files together using GCC via the terminal, run the following command in the project root directory:
