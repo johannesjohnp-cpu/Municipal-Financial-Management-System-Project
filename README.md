@@ -11,8 +11,8 @@
 * Tunomwaami Uajambekange Mufeti (226021955) – Asset Management Module
 * Fillipus N. Kayla (225091801) – Employee Management Module
 * Marj Marthin (226121992) – Supplier Management Module
-* Matheus Kandjulu (226175030) – Reports Module
-* Hilma Lushu (226176754) – Main Menu, Functions, Integration, and Validation
+* Matheus Kandjulu (226175030) – Main Menu, Functions, Integration, and Validation
+* Hilma Lushu (226176754) – Reports Module
 
 
 
