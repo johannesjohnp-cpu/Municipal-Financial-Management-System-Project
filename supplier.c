@@ -10,7 +10,7 @@ char supplierTown[10][100];
 char supplierID[10][100];
 int supplierCount=0;
 
-void readSupplierText(char prompt[], char text[], int size)
+void SupplierText(char prompt[], char text[], int size)
 {
     printf("%s", prompt);
     fgets(text, size, stdin);
@@ -18,10 +18,10 @@ void readSupplierText(char prompt[], char text[], int size)
     
 }
   void SupplierRequired(char prompt[], char text[], int size){
-   readSupplierText(prompt,text,size);
+   SupplierText(prompt,text,size);
   while(strlen(text) == 0) {
         printf("Input cannot be empty.\n");
-        readSupplierText(prompt, text, size);
+        SupplierText(prompt, text, size);
     
 }
   }
@@ -81,23 +81,23 @@ void addSupplier() {
      if (supplierCount == 10) {
         printf("Supplier list is full.\n");
     } else {
-        readSupplierRequired("Enter supplier name: ", name, sizeof(name));
+        SupplierRequired("Enter supplier name: ", name, sizeof(name));
 
         if (findSupplier(name) != -1) {
             printf("This supplier already exists.\n");
         } else {
-            readSupplierText("Enter email: ", email, sizeof(email));
-            while (checkSupplierEmail(email) == 0) {
+            SupplierText("Enter email: ", email, sizeof(email));
+            while (SupplierEmail(email) == 0) {
                 printf("Invalid email");
-                readSupplierText("Enter email: ", email, sizeof(email));
+                SupplierText("Enter email: ", email, sizeof(email));
             }
 
-            readSupplierText("Enter phone: ", phone, sizeof(phone));
-            while (checkSupplierPhone(phone) == 0) {
+            SupplierText("Enter phone: ", phone, sizeof(phone));
+            while (SupplierPhone(phone) == 0) {
                 printf("Invalid phone (digits only, at least 7).\n");
-                readSupplierText("Enter phone: ", phone, sizeof(phone));
+                SupplierText("Enter phone: ", phone, sizeof(phone));
             }
-            readSupplierRequired("Enter town: ", town, sizeof(town));
+            SupplierRequired("Enter town: ", town, sizeof(town));
  strcpy(supplierName[supplierCount], name);
             strcpy(supplierEmail[supplierCount], email);
             strcpy(supplierPhone[supplierCount], phone);
@@ -123,7 +123,7 @@ void searchSupplier() {
     char searchName[100];
     int position;
 
-    readSupplierRequired("Enter supplier name to search: ", searchName, sizeof(searchName));
+    SupplierRequired("Enter supplier name to search: ", searchName, sizeof(searchName));
     position = findSupplier(searchName);
 
     if (position != -1) {
