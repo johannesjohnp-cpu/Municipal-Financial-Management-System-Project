@@ -88,7 +88,7 @@ void addSupplier() {
         } else {
             readSupplierText("Enter email: ", email, sizeof(email));
             while (checkSupplierEmail(email) == 0) {
-                printf("Invalid email (example: sales@abc.com).\n");
+                printf("Invalid email");
                 readSupplierText("Enter email: ", email, sizeof(email));
             }
 
