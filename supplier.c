@@ -28,15 +28,18 @@ void SupplierText(char prompt[], char text[], int size)
   int SupplierEmail(char email[]){
     int length = strlen(email);
     int at = -1;
-    int dot = -1;
+   int valid= 0;
     for (int i = 0; i < length; i++) {
         if (email[i] == '@') {
             at = i;
-        } else if (email[i] == '.' && at != -1) {
-            dot = i;
         }
+        } if (at != -1) {
+             for (int i = at + 1 ; i < length; i++)
+             if (email[i] =='.'){
+                valid = 1 ;
+             }
     }
-    return (at != -1 && dot != -1); 
+    return valid;
 
   }
   int SupplierPhone(char number[]){
