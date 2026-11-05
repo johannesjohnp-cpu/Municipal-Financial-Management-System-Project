@@ -32,12 +32,14 @@ void SupplierText(char prompt[], char text[], int size)
     for (int i = 0; i < length; i++) {
         if (email[i] == '@') {
             at = i;
-        }
-        } if (at != -1) {
-             for (int i = at + 1 ; i < length; i++)
-             if (email[i] =='.'){
+         }
+        } 
+     if (at != -1) {
+             for (int i = at + 1 ; i < length; i++){
+             if (email[i] =='.') {
                 valid = 1 ;
              }
+            } 
     }
     return valid;
 
