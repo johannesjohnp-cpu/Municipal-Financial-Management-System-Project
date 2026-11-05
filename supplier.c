@@ -17,7 +17,7 @@ void readSupplierText(char prompt[], char text[], int size)
     text[strcspn(text, "\n")] = '\0'; 
     
 }
-  void readSupplierRequired(char prompt[], char text[], int size){
+  void SupplierRequired(char prompt[], char text[], int size){
    readSupplierText(prompt,text,size);
   while(strlen(text) == 0) {
         printf("Input cannot be empty.\n");
@@ -25,7 +25,7 @@ void readSupplierText(char prompt[], char text[], int size)
     
 }
   }
-  int checkSupplierEmail(char email[]){
+  int SupplierEmail(char email[]){
     int length = strlen(email);
     int at = -1;
     int dot = -1;
@@ -39,7 +39,7 @@ void readSupplierText(char prompt[], char text[], int size)
     return (at != -1 && dot != -1); 
 
   }
-  int checkSupplierPhone(char number[]){
+  int SupplierPhone(char number[]){
     int length = strlen(number);
     for (int i = 0; i < length; i++) {
         if (number[i] < '0' || number[i] > '9') {
